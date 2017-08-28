@@ -147,8 +147,8 @@ def mnist_model(learning_rate, use_two_fc, use_two_conv, hparam):
 	config = tf.contrib.tensorboard.plugins.projector.ProjectorConfig()
 	embedding_config = config.embeddings.add()
 	embedding_config.tensor_name = embedding.name
-	embedding_config.sprite.image_path = os.path.join(os.getcwd(), 'metadata/sprite_1024.png')
-	embedding_config.metadata_path = os.path.join(os.getcwd(), 'metadata/labels_1024.tsv')
+	embedding_config.sprite.image_path = os.path.join(os.getcwd(), 'sprite_1024.png')
+	embedding_config.metadata_path = os.path.join(os.getcwd(), 'labels_1024.tsv')
 	embedding_config.sprite.single_image_dim.extend([28, 28])
 	tf.contrib.tensorboard.plugins.projector.visualize_embeddings(writer, config)
 
